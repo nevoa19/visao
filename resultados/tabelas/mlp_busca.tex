@@ -1,0 +1,18 @@
+\begin{table}[!t]
+\centering
+\caption{Busca de arquiteturas do MLP (10 épocas, SGD, $\eta$ = 0,10, lote 256). Valores na época de menor perda de validação; * = escolhida.}
+\label{tab:busca}
+\begin{tabular}{lccccc}
+\hline
+camadas ocultas & parâmetros & acurácia val. & perda val. & época & tempo (s) \\
+\hline
+128 & 101.770 & 0,9705 & 0,1003 & 10 & 4,3 \\
+256 & 203.530 & 0,9728 & 0,0903 & 10 & 4,9 \\
+512 & 407.050 & 0,9742 & 0,0881 & 10 & 6,5 \\
+256 $\times$ 128 & 235.146 & 0,9737 & 0,0834 & 10 & 5,7 \\
+512 $\times$ 256 * & 535.818 & 0,9765 & 0,0804 & 10 & 7,9 \\
+256 $\times$ 128 $\times$ 64 & 242.762 & 0,9755 & 0,0862 & 9 & 6,2 \\
+512 $\times$ 256 $\times$ 128 & 567.434 & 0,9755 & 0,0829 & 10 & 9,1 \\
+\hline
+\end{tabular}
+\end{table}
